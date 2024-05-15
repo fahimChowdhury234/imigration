@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Imigration</title>
+      <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="./assets/css/style.css" />
+      <link rel="stylesheet" href="./assets/css/responsive.css" />
+   </head>
+   <body>
+      <main class="main">
+         <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container d-flex justify-content-between">
+               <a class="navbar-brand" href="#">immnz</a>
+               <button
+                  class="navbar-toggler d-lg-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsibleNavId"
+                  aria-controls="collapsibleNavId"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+               >
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+
+               <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
+                  <div class="navbar-nav gap-4">
+                     <a class="nav-link active" aria-current="page" href="#">Home</a>
+                     <a class="nav-link" href="#">Features</a>
+                     <a class="nav-link" href="#">Pricing</a>
+                     <a class="nav-link disabled">Disabled</a>
+                  </div>
+               </div>
+            </div>
+         </nav>
+         <section class="admin-page">
+            <div class="container">
+               <div class="admin-page-user-info-wrapper">
+                  <div class="title">
+                     <h1>Hey This Admin</h1>
+                     <p>Please submit user all information in bellow form</p>
+                  </div>
+                  <section class="visa-verification-secion">
+                     <div class="container">
+                        <div class="visa-verification-content">
+                           <div class="visa-verification-form auth-login-form">
+                              <div class="login-input">
+                                 <label for="user-list">User List</label>
+                                 <select id="user-list" onchange="handleUserSelect()">
+                                    <option value="">Select User</option>
+                                    <option value="User 1">User 1</option>
+                                    <option value="User 2">User 2</option>
+                                    <option value="User 3">User 3</option>
+                                 </select>
+                                 <div class="error" id="user-list-error">Please select a User.</div>
+                              </div>
+                              <div class="selected-user-info" id="selected-user-info">
+                                 <div class="login-input">
+                                    <label for="Familyname">Family Name</label>
+                                    <input type="text" id="Familyname" name="name" placeholder="Family Name" />
+                                    <div class="error" id="familyname-error">Please enter the family name.</div>
+                                 </div>
+                                 <div class="login-input">
+                                    <label for="nationality">Passport Nationality</label>
+                                    <select id="nationality">
+                                       <option value="">Select Nationality</option>
+                                       <option value="Bangladesh">Bangladesh</option>
+                                       <option value="India">India</option>
+                                       <option value="Pakistan">Pakistan</option>
+                                    </select>
+                                    <div class="error" id="nationality-error">Please select a nationality.</div>
+                                 </div>
+                                 <div class="login-input">
+                                    <label for="passportNumber">Passport Number</label>
+                                    <input type="text" id="passportNumber" name="passportNumber" placeholder="Passport Number" />
+                                    <div class="error" id="passportnumber-error">Please enter the passport number.</div>
+                                 </div>
+                                 <div class="login-input">
+                                    <label for="dateOfBirth">Date of Birth</label>
+                                    <input type="date" id="dateOfBirth" name="dateOfBirth" placeholder="Date of Birth" />
+                                    <div class="error" id="dateofbirth-error">Please enter the date of birth.</div>
+                                 </div>
+                                 <div class="login-input">
+                                    <label for="gender">Gender</label>
+                                    <select id="gender">
+                                       <option value="">Select Gender</option>
+                                       <option value="Man">Man</option>
+                                       <option value="Women">Women</option>
+                                       <option value="Others">Others</option>
+                                    </select>
+                                    <div class="error" id="gender-error">Please select a gender.</div>
+                                 </div>
+                                 <div class="login-input">
+                                    <label for="visadate">Visa Start Date</label>
+                                    <input type="date" id="visadate" name="visadate" placeholder="Visa Start Date" />
+                                    <div class="error" id="visadate-error">Please enter the visa start date.</div>
+                                 </div>
+                                 <div class="login-input">
+                                    <label for="visaType">Visa Type</label>
+                                    <select id="visaType">
+                                       <option value="">Select visa type</option>
+                                       <option value="AEWB">AEWB</option>
+                                       <option value="ASWB">ASWB</option>
+                                       <option value="ABWB">ABWB</option>
+                                    </select>
+                                    <div class="error" id="visaType-error">Please select Visa Type.</div>
+                                 </div>
+                                 <div class="login-input">
+                                    <label for="INZCClientNumber"> INZ client Number </label>
+                                    <input type="text" id="INZCClientNumber" name="INZCClientNumber" placeholder="INZ client Number" />
+                                    <div class="error" id="INZCClientNumber-error">Please enter the INZ client Number.</div>
+                                 </div>
+                                 <div class="login-input">
+                                    <label for="firstEntryBefore">First Entry before</label>
+                                    <input type="date" id="firstEntryBefore" name="firstEntryBefore" placeholder="First Entry before" />
+                                    <div class="error" id="firstEntryBefore-error">Please enter the First Entry before</div>
+                                 </div>
+                                 <div class="login-input">
+                                    <label for="numberOfEntry"> Numbers of entrys </label>
+                                    <input type="text" id="numberOfEntry" name="numberOfEntry" placeholder="Number of Entries" />
+                                    <div class="error" id="numberOfEntry-error">Please enter the Numbers of entries</div>
+                                 </div>
+                                 <div class="login-input">
+                                    <label for="expiryDateTrable">Expiry date Travel</label>
+                                    <input type="date" id="expiryDateTrable" name="expiryDateTrable" placeholder="Expiry Date Travel" />
+                                    <div class="error" id="expiryDateTrable-error">Please enter the Expiry date Travel.</div>
+                                 </div>
+                                 <div class="login-input">
+                                    <label for="visaExpiry">Visa Expiry</label>
+                                    <input type="date" id="visaExpiry" name="visaExpiry" placeholder="Visa Expiry" />
+                                    <div class="error" id="visaExpiry-error">Please enter the Visa Expiry date.</div>
+                                 </div>
+                                 <div class="my-4">
+                                    <div class="d-flex gap-3">
+                                       <input type="checkbox" name="checkbox" id="check" />
+                                       <label for="check">The visa holder has consented to this check</label>
+                                    </div>
+                                    <div class="error" id="checkbox-error">You must check this box to proceed.</div>
+                                 </div>
+                                 <div class="login-input d-flex align-items-center gap-3">
+                                    <button type="button" id="submit-btn" onclick="validateForm()">Submit</button>
+                                    <div class="success" id="success-message">Form submitted successfully!</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+            </div>
+         </section>
+      </main>
+      <script src="./assets/js/jquery-3.6.0.min.js"></script>
+      <script src="./assets/js/bootstrap.min.js"></script>
+      <script>
+         function handleUserSelect() {
+            const userList = document.getElementById("user-list");
+            const selectedUserInfo = document.getElementById("selected-user-info");
+            const userError = document.getElementById("user-list-error");
+
+            if (userList.value === "") {
+               selectedUserInfo.style.display = "none";
+               userError.style.display = "block";
+            } else {
+               selectedUserInfo.style.display = "block";
+               userError.style.display = "none";
+            }
+         }
+         function validateForm() {
+            let isValid = true;
+
+            const familyName = document.getElementById("Familyname");
+            const familyNameError = document.getElementById("familyname-error");
+            if (familyName.value.trim() === "") {
+               familyNameError.style.display = "block";
+               isValid = false;
+            } else {
+               familyNameError.style.display = "none";
+            }
+
+            const nationality = document.getElementById("nationality");
+            const nationalityError = document.getElementById("nationality-error");
+            if (nationality.value === "") {
+               nationalityError.style.display = "block";
+               isValid = false;
+            } else {
+               nationalityError.style.display = "none";
+            }
+
+            const passportNumber = document.getElementById("passportNumber");
+            const passportNumberError = document.getElementById("passportnumber-error");
+            if (passportNumber.value.trim() === "") {
+               passportNumberError.style.display = "block";
+               isValid = false;
+            } else {
+               passportNumberError.style.display = "none";
+            }
+
+            const dateOfBirth = document.getElementById("dateOfBirth");
+            const dateOfBirthError = document.getElementById("dateofbirth-error");
+            if (dateOfBirth.value === "") {
+               dateOfBirthError.style.display = "block";
+               isValid = false;
+            } else {
+               dateOfBirthError.style.display = "none";
+            }
+
+            const gender = document.getElementById("gender");
+            const genderError = document.getElementById("gender-error");
+            if (gender.value === "") {
+               genderError.style.display = "block";
+               isValid = false;
+            } else {
+               genderError.style.display = "none";
+            }
+
+            const visaDate = document.getElementById("visadate");
+            const visaDateError = document.getElementById("visadate-error");
+            if (visaDate.value === "") {
+               visaDateError.style.display = "block";
+               isValid = false;
+            } else {
+               visaDateError.style.display = "none";
+            }
+
+            const visaType = document.getElementById("visaType");
+            const visaTypeError = document.getElementById("visaType-error");
+            if (visaType.value === "") {
+               visaTypeError.style.display = "block";
+               isValid = false;
+            } else {
+               visaTypeError.style.display = "none";
+            }
+
+            const INZCClientNumber = document.getElementById("INZCClientNumber");
+            const INZCClientNumberError = document.getElementById("INZCClientNumber-error");
+            if (INZCClientNumber.value.trim() === "") {
+               INZCClientNumberError.style.display = "block";
+               isValid = false;
+            } else {
+               INZCClientNumberError.style.display = "none";
+            }
+
+            const firstEntryBefore = document.getElementById("firstEntryBefore");
+            const firstEntryBeforeError = document.getElementById("firstEntryBefore-error");
+            if (firstEntryBefore.value === "") {
+               firstEntryBeforeError.style.display = "block";
+               isValid = false;
+            } else {
+               firstEntryBeforeError.style.display = "none";
+            }
+
+            const numberOfEntry = document.getElementById("numberOfEntry");
+            const numberOfEntryError = document.getElementById("numberOfEntry-error");
+            if (numberOfEntry.value.trim() === "") {
+               numberOfEntryError.style.display = "block";
+               isValid = false;
+            } else {
+               numberOfEntryError.style.display = "none";
+            }
+
+            const expiryDateTrable = document.getElementById("expiryDateTrable");
+            const expiryDateTrableError = document.getElementById("expiryDateTrable-error");
+            if (expiryDateTrable.value === "") {
+               expiryDateTrableError.style.display = "block";
+               isValid = false;
+            } else {
+               expiryDateTrableError.style.display = "none";
+            }
+
+            const visaExpiry = document.getElementById("visaExpiry");
+            const visaExpiryError = document.getElementById("visaExpiry-error");
+            if (visaExpiry.value === "") {
+               visaExpiryError.style.display = "block";
+               isValid = false;
+            } else {
+               visaExpiryError.style.display = "none";
+            }
+
+            const checkBox = document.getElementById("check");
+            const checkBoxError = document.getElementById("checkbox-error");
+            if (!checkBox.checked) {
+               checkBoxError.style.display = "block";
+               isValid = false;
+            } else {
+               checkBoxError.style.display = "none";
+            }
+
+            if (isValid) {
+               document.getElementById("success-message").style.display = "block";
+               setTimeout(() => {
+                  document.getElementById("success-message").style.display = "none";
+               }, 5000);
+
+               const submitBtn = document.getElementById("submit-btn");
+               submitBtn.classList.add("loading");
+               //    fetch("your-api-endpoint", {
+               //       method: "POST",
+               //       headers: {
+               //          "Content-Type": "application/json",
+               //       },
+               //       body: JSON.stringify({
+               //          familyName: familyName.value,
+               //          nationality: nationality.value,
+               //          passportNumber: passportNumber.value,
+               //          dateOfBirth: dateOfBirth.value,
+               //          gender: gender.value,
+               //          visaDate: visaDate.value,
+               //          visaType: visaType.value,
+               //          INZCClientNumber: INZCClientNumber.value,
+               //          firstEntryBefore: firstEntryBefore.value,
+               //          numberOfEntry: numberOfEntry.value,
+               //          expiryDateTrable: expiryDateTrable.value,
+               //          visaExpiry: visaExpiry.value,
+               //          checkBox: checkBox.checked,
+               //       }),
+               //    })
+               //       .then((response) => response.json())
+               //       .then((data) => {
+               //          console.log("Success:", data);
+               //          submitBtn.classList.remove("loading");
+               //          window.location.href = "home.html";
+               //       })
+               //       .catch((error) => {
+               //          console.error("Error:", error);
+               //          submitBtn.classList.remove("loading");
+               //       });
+            }
+         }
+      </script>
+   </body>
+</html>

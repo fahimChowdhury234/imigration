@@ -1,0 +1,92 @@
+@media only screen and (max-width: 768px) and (min-width: 300px) {
+
+    .title h1 {
+        font-size: 24px;
+    }
+
+    .service_detail h1 {
+        font-size: 20px;
+    }
+
+    .service_category h2 {
+        font-size: 20px;
+
+    }
+
+    .title h3 {
+        margin-bottom: 2.375em;
+    }
+
+    .title h3,
+    .service_detail p,
+    .visa-verification-content p {
+        font-size: 14px;
+        text-wrap: wrap;
+    }
+
+    .service_category .services {
+        columns: 1;
+    }
+
+    .login_details {
+        padding: 2em 1em;
+    }
+
+    .service_category .services button {
+        font-size: 16px;
+        padding: 20px 20px;
+    }
+
+    .auth-left {
+        display: none;
+    }
+
+    .auth-right {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .auth-login {
+        width: 100%;
+    }
+
+    .auth-login h2 {
+        font-size: 28px;
+    }
+
+    .visa-verification-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .acting-for h4,
+    .as-login h4 {
+        font-size: 18px;
+    }
+
+    .visa-verification-content h2 {
+        font-size: 20px;
+    }
+
+    .visa-verification-form {
+        width: 100%;
+    }
+
+    .visa-details-info {
+        width: 100%;
+    }
+
+    .visa-details-info button,
+    .visa-details-info label {
+        width: 45%;
+        font-size: 15px;
+    }
+
+    .auth-login-form .login-input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}
