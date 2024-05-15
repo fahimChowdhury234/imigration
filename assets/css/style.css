@@ -120,12 +120,12 @@ a {
 }
 
 .selected {
-    background: #db2a5f !important;
+    background: #d64309 !important;
     color: #fff !important;
 }
 
 .service_category .services button:hover {
-    background: #db2a5f;
+    background: #d64309;
     color: #fff;
 }
 
